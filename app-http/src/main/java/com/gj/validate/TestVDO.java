@@ -3,7 +3,9 @@ package com.gj.validate;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * @ClassName: TestVDO
@@ -28,6 +30,8 @@ public class TestVDO {
     @Range(min = 0,max = 10,message = "range 不在范围")
     private Long range;
 
+    @NotBlank(message = "url地址不能为空")
+    @Size(min = 5,max = 20,message = "字符长度必须在5-20之间")
     private String url;
 
 }

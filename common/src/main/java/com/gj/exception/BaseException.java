@@ -1,6 +1,7 @@
 package com.gj.exception;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * @ClassName: BaseException
@@ -11,10 +12,13 @@ import lombok.Data;
  **/
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 public class BaseException extends RuntimeException {
 
     public Integer code;
     public String message;
+
+    public BaseException(){}
 
     public BaseException(Integer code,String message) {
         super(message);

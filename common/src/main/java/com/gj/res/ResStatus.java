@@ -17,7 +17,11 @@ public enum ResStatus implements IResponseEnum {
 
     SUCCESS(200,"操作成功。"),
 
-    SERVER_ERROR(500,"服务器异常")
+    SERVER_ERROR(500,"服务器异常"),
+
+    PARAMETER_ERROR(40001,"请求参数错误");
+
+
 
     ;
 
